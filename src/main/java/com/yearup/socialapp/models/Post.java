@@ -1,10 +1,16 @@
 package com.yearup.socialapp.models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Post {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private Long ID;
-    private Long AccountID;
+    private Long accountId;
     private String message;
     private Integer Rank;
 
@@ -12,12 +18,12 @@ public class Post {
     public Post() {
     }
 
-    public Long getID() {
-        return ID;
+    public Long getId() {
+        return id;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getMessage() {
@@ -36,19 +42,19 @@ public class Post {
         Rank = rank;
     }
 
-    public Long getAccountID() {
-        return AccountID;
+    public Long getAccountId() {
+        return accountId;
     }
 
-    public void setAccountID(Long accountID) {
-        AccountID = accountID;
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     @Override
     public String toString() {
         return "Post{" +
-                "ID=" + ID +
-                ", AccountID=" + AccountID +
+                "id=" + id +
+                ", AccountID=" + accountId +
                 ", message='" + message + '\'' +
                 ", Rank=" + Rank +
                 '}';
