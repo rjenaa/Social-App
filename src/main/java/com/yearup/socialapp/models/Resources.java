@@ -1,14 +1,19 @@
 package com.yearup.socialapp.models;
 
-import java.io.File;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 public class Resources {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer rank;
+
     private String URL;
-    private Long AccountID;
-    private Integer Helpful;
-    private Integer NotHelpful;
-    private Integer Rank;
+    private Long accountId;
+    private Integer helpful;
+    private Integer notHelpful;
 
     public Resources() {
     }
@@ -22,45 +27,45 @@ public class Resources {
     }
 
     public Integer getHelpful() {
-        return Helpful;
+        return helpful;
     }
 
     public void setHelpful(Integer helpful) {
-        Helpful = helpful;
+        this.helpful = helpful;
     }
 
     public Integer getNotHelpful() {
-        return NotHelpful;
+        return notHelpful;
     }
 
     public void setNotHelpful(Integer notHelpful) {
-        NotHelpful = notHelpful;
+        this.notHelpful = notHelpful;
     }
 
     public Integer getRank() {
-        return Rank;
+        return rank;
     }
 
     public void setRank(Integer rank) {
-        Rank = rank;
+        this.rank = rank;
     }
 
-    public Long getAccountID() {
-        return AccountID;
+    public Long getAccountId() {
+        return accountId;
     }
 
-    public void setAccountID(Long accountID) {
-        AccountID = accountID;
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     @Override
     public String toString() {
         return "Resources{" +
                 "URL='" + URL + '\'' +
-                ", AccountID=" + AccountID +
-                ", Helpful=" + Helpful +
-                ", NotHelpful=" + NotHelpful +
-                ", Rank=" + Rank +
+                ", AccountID=" + accountId +
+                ", Helpful=" + helpful +
+                ", NotHelpful=" + notHelpful +
+                ", Rank=" + rank +
                 '}';
     }
 }
