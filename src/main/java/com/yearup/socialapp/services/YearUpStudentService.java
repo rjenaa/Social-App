@@ -11,8 +11,7 @@ public class YearUpStudentService {
     @Autowired
     YearUpStudentRepository yearUpStudentRepository;
 
-    public Iterable<YearUpStudent> getUserByFirstNameLastName(String fName, String lName){
-        yearUpStudentRepository.findYearUpStudentByFNameAndLName(fName, lName);
-        return getUserByFirstNameLastName(fName, lName);
-    }
+    @Autowired
+    AccountService accountService;
+
 }

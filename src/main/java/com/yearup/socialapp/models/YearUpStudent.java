@@ -1,50 +1,49 @@
 package com.yearup.socialapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class YearUpStudent {
 
     @Id
-    private String userName;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty
+    private Long id;
 
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String nickName;
     private String email;
     private String phoneNumber;
-    private String education;//Most likely array
     private String bio;
-    private String experience;//Most likely array
-    private String skill;//Most likely array
-//    private Post post;
+    private String skill;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Experience> experience;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Education> education;
     
     public YearUpStudent() {
     }
 
-    public String getUserName() {
-        return userName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getfName() {
-        return fName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getNickName() {
@@ -71,11 +70,11 @@ public class YearUpStudent {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getEducation() {
+    public Set<Education> getEducation() {
         return education;
     }
 
-    public void setEducation(String education) {
+    public void setEducation(Set<Education> education) {
         this.education = education;
     }
 
@@ -87,11 +86,11 @@ public class YearUpStudent {
         this.bio = bio;
     }
 
-    public String getExperience() {
+    public Set<Experience> getExperience() {
         return experience;
     }
 
-    public void setExperience(String experience) {
+    public void setExperience(Set<Experience> experience) {
         this.experience = experience;
     }
 
@@ -103,18 +102,26 @@ public class YearUpStudent {
         this.skill = skill;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "YearUpStudent{" +
-                "userName='" + userName + '\'' +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", nickName='" + nickName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", education='" + education + '\'' +
                 ", bio='" + bio + '\'' +
-                ", experience='" + experience + '\'' +
+                ", experience=" + experience +
+                ", education=" + education +
                 ", skill='" + skill + '\'' +
                 '}';
     }

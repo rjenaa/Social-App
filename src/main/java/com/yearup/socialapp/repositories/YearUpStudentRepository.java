@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface YearUpStudentRepository extends CrudRepository<YearUpStudent, String> {
 
-    Iterable<YearUpStudent> findYearUpStudentByFNameAndLName(String fName, String lName);
+    Iterable<YearUpStudent> findAllByFirstName (String firstName);
 }
