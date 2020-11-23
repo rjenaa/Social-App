@@ -17,6 +17,9 @@ public class Account {
     private String email;
     private String phoneNumber;
 
+    public Account() {
+    }
+
     public String getUserName() {
         return userName;
     }

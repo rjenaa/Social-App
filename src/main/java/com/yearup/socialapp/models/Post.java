@@ -9,6 +9,8 @@ public class Post {
     private Integer Rank;
 
 
+    public Post() {
+    }
 
     public Long getID() {
         return ID;
