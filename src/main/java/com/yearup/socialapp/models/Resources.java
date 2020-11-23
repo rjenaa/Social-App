@@ -10,6 +10,9 @@ public class Resources {
     private Integer NotHelpful;
     private Integer Rank;
 
+    public Resources() {
+    }
+
     public String getURL() {
         return URL;
     }

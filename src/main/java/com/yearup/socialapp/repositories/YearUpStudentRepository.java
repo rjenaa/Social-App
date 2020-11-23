@@ -1,4 +1,9 @@
 package com.yearup.socialapp.repositories;
 
-public interface YearUpStudentRepository {
+import com.yearup.socialapp.models.YearUpStudent;
+import org.springframework.data.repository.CrudRepository;
+
+public interface YearUpStudentRepository extends CrudRepository<YearUpStudent, String> {
+
+    Iterable<YearUpStudent> findAllByFirstName (String firstName);
 }
