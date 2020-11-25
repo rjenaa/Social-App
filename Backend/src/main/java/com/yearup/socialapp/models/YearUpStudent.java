@@ -11,8 +11,9 @@ public class YearUpStudent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @JsonProperty
-    private Long id;
+    private Long Id;
 
+    private Long accountId;
     private String firstName;
     private String lastName;
     private String nickName;
@@ -103,17 +104,25 @@ public class YearUpStudent {
     }
 
     public Long getId() {
-        return id;
+        return Id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.Id = id;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     @Override
     public String toString() {
         return "YearUpStudent{" +
-                "id=" + id +
+                "id=" + Id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", nickName='" + nickName + '\'' +
