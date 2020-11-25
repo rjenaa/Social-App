@@ -22,7 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dee1a678-2475-4638-8f2b-ff1e20079f98" name="Default Changelist" comment="" />
+    <list default="true" id="dee1a678-2475-4638-8f2b-ff1e20079f98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SocialApp.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,19 +61,46 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Team7/quick-poll-springboot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Backend" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.SocialAppApplication">
+    <configuration name="E2E Tests (Social)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/Frontend/Social/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
     <configuration name="SocialAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SocialApp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.SocialApp.SocialApp.SocialAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/Frontend/Social/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,7 +115,7 @@
       <workItem from="1606071290373" duration="412000" />
       <workItem from="1606159051592" duration="6724000" />
       <workItem from="1606268842259" duration="2737000" />
-      <workItem from="1606314298065" duration="672000" />
+      <workItem from="1606314298065" duration="1695000" />
     </task>
     <servers />
   </component>
@@ -115,43 +147,47 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="508" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606165348776" />
-    <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1606271523582">
+    <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1606315927833">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606159632740" />
+    <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315927833" />
     <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1606271523582" />
-    <state width="1458" height="452" key="GridCell.Tab.0.bottom" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.0.bottom" timestamp="1606315995967">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.0.bottom/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.0.center" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.0.bottom/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995967" />
+    <state width="1457" height="343" key="GridCell.Tab.0.center" timestamp="1606315995966">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.0.center/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.0.left" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.0.center/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995966" />
+    <state width="1457" height="343" key="GridCell.Tab.0.left" timestamp="1606315995966">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.0.left/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.0.right" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.0.left/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995966" />
+    <state width="1457" height="343" key="GridCell.Tab.0.right" timestamp="1606315995966">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.0.right/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.1.bottom" timestamp="1605904170604">
+    <state width="1457" height="343" key="GridCell.Tab.0.right/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995966" />
+    <state width="1457" height="343" key="GridCell.Tab.1.bottom" timestamp="1606315995968">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.1.bottom/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170604" />
-    <state width="1458" height="452" key="GridCell.Tab.1.center" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.1.bottom/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995968" />
+    <state width="1457" height="343" key="GridCell.Tab.1.center" timestamp="1606315995967">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.1.center/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.1.left" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.1.center/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995967" />
+    <state width="1457" height="343" key="GridCell.Tab.1.left" timestamp="1606315995967">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.1.left/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
-    <state width="1458" height="452" key="GridCell.Tab.1.right" timestamp="1605904170603">
+    <state width="1457" height="343" key="GridCell.Tab.1.left/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995967" />
+    <state width="1457" height="343" key="GridCell.Tab.1.right" timestamp="1606315995967">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1458" height="452" key="GridCell.Tab.1.right/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1605904170603" />
+    <state width="1457" height="343" key="GridCell.Tab.1.right/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315995967" />
+    <state x="252" y="125" key="SettingsEditor" timestamp="1606315706615">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="252" y="125" key="SettingsEditor/0.0.1500.960/-1440.580.1440.860@0.0.1500.960" timestamp="1606315706615" />
     <state x="175" y="141" key="new project wizard" timestamp="1606071375922">
       <screen x="0" y="0" width="1500" height="960" />
     </state>

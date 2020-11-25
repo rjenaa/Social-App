@@ -9,8 +9,8 @@
         <module name="SocialApp" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="SocialApp" target="11" />
+    <bytecodeTargetLevel target="14">
+      <module name="SocialApp" target="14" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
