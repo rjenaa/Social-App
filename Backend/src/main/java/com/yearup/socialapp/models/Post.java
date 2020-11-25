@@ -13,7 +13,7 @@ public class Post {
     private Long accountId;
     private String message;
     private Integer Rank;
-
+    private Integer Likes;
 
     public Post() {
     }
@@ -48,6 +48,14 @@ public class Post {
 
     public void setAccountId(Long accountId) {
         this.accountId = accountId;
+    }
+
+    public Integer getLikes() {
+        return Likes;
+    }
+
+    public void setLikes(Integer likes) {
+        Likes = likes;
     }
 
     @Override
