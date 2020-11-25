@@ -5,7 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ResourcesRepository extends CrudRepository<Resources, Long> {
+public interface ResourcesRepository extends CrudRepository<Resources, Integer> {
 
-    Iterable<Resources> findAllByAccountId(Long accountId);
 }
