@@ -14,7 +14,7 @@ public class Post {
 
     private Long accountId;
     private String message;
-    private Integer Rank;
+    private Long Rank;
     private Integer Likes;
 
     public Post() {
@@ -36,11 +36,11 @@ public class Post {
         this.message = message;
     }
 
-    public Integer getRank() {
+    public Long getRank() {
         return Rank;
     }
 
-    public void setRank(Integer rank) {
+    public void setRank(Long rank) {
         Rank = rank;
     }
 
