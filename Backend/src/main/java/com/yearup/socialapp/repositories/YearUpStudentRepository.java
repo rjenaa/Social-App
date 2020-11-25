@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface YearUpStudentRepository extends CrudRepository<YearUpStudent, String> {
+public interface YearUpStudentRepository extends CrudRepository<YearUpStudent, Long> {
 
     Optional<YearUpStudent> findYearUpStudentByFirstName(String firstName);
 
     Optional<YearUpStudent> findYearUpStudentByLastName(String lastName);
 
-    List<YearUpStudent> findYearUpStudentById(Long ID);
+    Optional<YearUpStudent> findYearUpStudentByAccountId(Long accountId);
 
 }
