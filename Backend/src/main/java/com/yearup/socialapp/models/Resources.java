@@ -12,7 +12,7 @@ public class Resources {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer rank;
+    private Integer Rank;
     private String URL;
     private Long accountId;
     private Integer helpful;
@@ -54,11 +54,11 @@ public class Resources {
     }
 
     public Integer getRank() {
-        return rank;
+        return Rank;
     }
 
     public void setRank(Integer rank) {
-        this.rank = rank;
+        this.Rank = rank;
     }
 
     public Long getAccountId() {
@@ -73,7 +73,7 @@ public class Resources {
     public String toString() {
         return "Resources{" +
                 "id=" + id +
-                ", rank=" + rank +
+                ", rank=" + Rank +
                 ", URL='" + URL + '\'' +
                 ", accountId=" + accountId +
                 ", helpful=" + helpful +
