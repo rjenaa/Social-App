@@ -10,14 +10,23 @@ public class Resources {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer rank;
+    private Long id;
 
+    private Integer rank;
     private String URL;
     private Long accountId;
     private Integer helpful;
     private Integer notHelpful;
 
     public Resources() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getURL() {
@@ -63,11 +72,12 @@ public class Resources {
     @Override
     public String toString() {
         return "Resources{" +
-                "URL='" + URL + '\'' +
-                ", AccountID=" + accountId +
-                ", Helpful=" + helpful +
-                ", NotHelpful=" + notHelpful +
-                ", Rank=" + rank +
+                "id=" + id +
+                ", rank=" + rank +
+                ", URL='" + URL + '\'' +
+                ", accountId=" + accountId +
+                ", helpful=" + helpful +
+                ", notHelpful=" + notHelpful +
                 '}';
     }
 }
