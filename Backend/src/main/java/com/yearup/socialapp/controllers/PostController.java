@@ -27,9 +27,9 @@ public class PostController {
         return postService.getPostById(id);
     }
 
-    @RequestMapping (value = "/post/{rank}", method = RequestMethod.GET)
-    public Iterable<Post> getPostByRank(@PathVariable Long rank){
-        return postService.getPostByRank(rank);
+    @RequestMapping (value = "/post", method = RequestMethod.GET)
+    public Iterable<Post> getPostByLikes(@PathVariable Long likes){
+        return postService.getPostByLikes(likes);
     }
 
     @RequestMapping (value = "/post/{accountId}", method = RequestMethod.GET)

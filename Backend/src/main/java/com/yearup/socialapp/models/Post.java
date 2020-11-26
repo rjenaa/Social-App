@@ -14,8 +14,7 @@ public class Post {
 
     private Long accountId;
     private String message;
-    private Long Rank;
-    private Integer Likes;
+    private Long Likes;
 
     public Post() {
     }
@@ -36,14 +35,6 @@ public class Post {
         this.message = message;
     }
 
-    public Long getRank() {
-        return Rank;
-    }
-
-    public void setRank(Long rank) {
-        Rank = rank;
-    }
-
     public Long getAccountId() {
         return accountId;
     }
@@ -52,11 +43,11 @@ public class Post {
         this.accountId = accountId;
     }
 
-    public Integer getLikes() {
+    public Long getLikes() {
         return Likes;
     }
 
-    public void setLikes(Integer likes) {
+    public void setLikes(Long likes) {
         Likes = likes;
     }
 
@@ -64,9 +55,9 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "id=" + id +
-                ", AccountID=" + accountId +
+                ", accountId=" + accountId +
                 ", message='" + message + '\'' +
-                ", Rank=" + Rank +
+                ", Likes=" + Likes +
                 '}';
     }
 }

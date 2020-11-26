@@ -25,8 +25,10 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public Iterable<Post> getPostByRank(Long rank){
-        return postRepository.findAllByRank(rank);
+    public Iterable<Post> getPostByLikes(Long likes){
+
+
+        return postRepository.findAllByRank(likes);
     }
 
     public Post createPost(Post post){

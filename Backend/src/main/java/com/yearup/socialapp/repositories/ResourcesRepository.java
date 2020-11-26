@@ -9,9 +9,8 @@ import java.util.Optional;
 @Repository
 public interface ResourcesRepository extends CrudRepository<Resources, Long> {
 
-    Optional<Resources> findResourceById (Long id);//Get all resources from all users that have been posted.
+    Optional<Resources> findById (Long id);//Get all resources from all users that have been posted.
 
-    Iterable<Resources> findAllByRank(Integer rank);
+    Iterable<Resources> findAllByAccountId(Long accountId);
 
-    Iterable<Resources> findAllByAccountId(Long id);
 }

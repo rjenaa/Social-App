@@ -41,10 +41,10 @@ public class ResourcesController {
         return resourcesService.getAllResources();
     }
 
-    @RequestMapping (value = "/resources/{id}/{ranked}", method = RequestMethod.GET)//Get best resources
-    public Iterable<Resources> getBestResources(@PathVariable Long id, @PathVariable Integer ranked){
-        return resourcesService.getMostLikedResourceByRank(ranked);
-    }
+//    @RequestMapping (value = "/resources/{id}/{ranked}", method = RequestMethod.GET)//Get best resources
+//    public Iterable<Resources> getBestResources(@PathVariable Long id, @PathVariable Integer ranked){
+//        return resourcesService.getMostLikedResourceByRank(ranked);
+//    }
 
     @PostMapping (value = "/upload/resources/{accountId}/{id}")//Creating a resource
     public ResponseEntity<String> uploadFile(@RequestParam(value = "file") final MultipartFile multipartFile, @PathVariable Long accountId, @PathVariable Long id){

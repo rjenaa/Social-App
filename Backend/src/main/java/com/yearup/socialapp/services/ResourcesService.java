@@ -14,18 +14,18 @@ public class ResourcesService {
     ResourcesRepository resourcesRepository;
 
     public Optional<Resources> getResourceById(Long id){
-        return resourcesRepository.findResourceById(id);
+        return resourcesRepository.findById(id);
     }
 
     public Iterable<Resources> getAllResources(){
         return resourcesRepository.findAll();
     }
 
-    public Iterable<Resources> getAllResourcesByAccountId(Long id){
-        return resourcesRepository.findAllByAccountId(id);
+    public Iterable<Resources> getAllResourcesByAccountId(Long accountId){
+        return resourcesRepository.findAllByAccountId(accountId);
     }
 
-    public Iterable<Resources> getMostLikedResourceByRank(Integer rank){
-        return resourcesRepository.findAllByRank(rank);
-    }
+//    public Iterable<Resources> getMostLikedResourceByRank(Integer rank){
+//        return resourcesRepository.findAllByRank(rank);
+//    }
 }
