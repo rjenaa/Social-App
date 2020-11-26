@@ -49,7 +49,4 @@ public class YearUpStudentService {
     public void deleteYearUpStudent(Long id){
          yearUpStudentRepository.deleteById(id);
     }
-
-
-
 }
