@@ -6,7 +6,10 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ResourcesService {
 
+  private URL = 'http://localhost:8080';
+
   constructor(private http: HttpClient ) { }
+
 
 
 }
