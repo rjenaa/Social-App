@@ -2,10 +2,11 @@ package com.yearup.socialapp.services;
 
 import com.yearup.socialapp.models.Post;
 import com.yearup.socialapp.repositories.PostRepository;
+import com.zaxxer.hikari.util.FastList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class PostService {
@@ -25,10 +26,11 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public Iterable<Post> getPostByLikes(Long likes){
-
-
-        return postRepository.findAllByRank(likes);
+    public List<Post> getPostByLikes(){
+        List<Post> postList = new ArrayList<>();
+        postRepository.findAll().forEach(postList::add);
+        postList.sort(Comparator.comparing(Post::getLikes));
+        return postList;
     }
 
     public Post createPost(Post post){

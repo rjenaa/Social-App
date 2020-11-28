@@ -3,19 +3,14 @@ package com.yearup.socialapp.controllers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
-
-@CrossOrigin(origins = "http://localhost:4200")
-@RestController
-public class PostController {
-
 import com.yearup.socialapp.AWS.FileService;
 import com.yearup.socialapp.models.Post;
 import com.yearup.socialapp.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class PostController {
 
@@ -36,8 +31,8 @@ public class PostController {
     }
 
     @RequestMapping (value = "/post", method = RequestMethod.GET)
-    public Iterable<Post> getPostByLikes(@PathVariable Long likes){
-        return postService.getPostByLikes(likes);
+    public Iterable<Post> getPostByLikes(){
+        return postService.getPostByLikes();
     }
 
     @RequestMapping (value = "/post/{accountId}", method = RequestMethod.GET)
