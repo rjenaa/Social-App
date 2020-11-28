@@ -30,6 +30,7 @@ public class FileService implements FileServiceInterface{
     @Value("${aws.s3.bucket}")
     private String bucketName;
 
+
     @Value("${aws.url}")
     private String bucketURL;
 
