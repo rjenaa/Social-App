@@ -1,5 +1,7 @@
 package com.yearup.socialapp.controllers;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
 import com.yearup.socialapp.AWS.FileService;
 import com.yearup.socialapp.models.Resources;
 import com.yearup.socialapp.models.YearUpStudent;
@@ -13,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
 
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ResourcesController {
 

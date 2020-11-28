@@ -22,6 +22,12 @@ public class YearUpStudent {
     private String bio;
     private String skill;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private Resume resume;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Picture picture;
+
     @OneToMany(cascade = CascadeType.ALL)
     private Set<Experience> experience;
 
@@ -119,19 +125,38 @@ public class YearUpStudent {
         this.accountId = accountId;
     }
 
+    public Resume getResume() {
+        return resume;
+    }
+
+    public void setResume(Resume resume) {
+        this.resume = resume;
+    }
+
+    public Picture getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Picture picture) {
+        this.picture = picture;
+    }
+
     @Override
     public String toString() {
         return "YearUpStudent{" +
-                "id=" + Id +
+                "Id=" + Id +
+                ", accountId=" + accountId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", nickName='" + nickName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", bio='" + bio + '\'' +
+                ", skill='" + skill + '\'' +
+                ", resume=" + resume +
+                ", picture=" + picture +
                 ", experience=" + experience +
                 ", education=" + education +
-                ", skill='" + skill + '\'' +
                 '}';
     }
 }

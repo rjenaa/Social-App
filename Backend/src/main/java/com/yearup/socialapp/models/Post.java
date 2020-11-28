@@ -19,10 +19,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(Long id, Long accountId, Long likes) {
+    public Post(Long id, Long likes) {
         this.id = id;
-        this.accountId = accountId;
-        this.message = message;
         this.likes = likes;
     }
 

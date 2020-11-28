@@ -6,9 +6,7 @@ import com.zaxxer.hikari.util.FastList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class PostService {
@@ -28,12 +26,10 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public Iterable<Post> getPostByLikes(Long id, Long accountId, Long likes){
-
-        //for(Post post:)
+    public List<Post> getPostByLikes(){
         List<Post> postList = new ArrayList<>();
-        postList.add(new Post(id, accountId, likes));
-
+        postRepository.findAll().forEach(postList::add);
+        postList.sort(Comparator.comparing(Post::getLikes));
         return postList;
     }
 

@@ -45,10 +45,15 @@ public class YearUpStudentController {
     @RequestMapping(value ="/YearUpStudents/{id}", method = RequestMethod.DELETE)
     public void deleteYearUpStudent(@PathVariable Long id){ yearUpStudentService.deleteYearUpStudent(id);}
 
-    @PostMapping(value= "/upload/{id}")
-    public ResponseEntity<String> uploadFile(@RequestParam(value= "file") final MultipartFile multipartFile, @PathVariable Long id) {
-        YearUpStudent yearUpStudent = yearUpStudentService.getYearUpStudentByID(id).get();
-        fileService.uploadFile(multipartFile, yearUpStudent);
+    @PostMapping(value= "/upload/resume/{id}")
+    public ResponseEntity<String> uploadResume(@RequestParam(value= "file") final MultipartFile multipartFile, @PathVariable Long id) {
+        yearUpStudentService.uploadResume(multipartFile,id);
+        final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+    @PostMapping(value= "/upload/photo/{id}")
+    public ResponseEntity<String> uploadPhoto(@RequestParam(value= "file") final MultipartFile multipartFile, @PathVariable Long id) {
+        yearUpStudentService.uploadPicture(multipartFile,id);
         final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
