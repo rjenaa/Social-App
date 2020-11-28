@@ -1,5 +1,7 @@
 import { Experience } from './Experience';
 import { Education } from './Education';
+import { Picture } from './Picture';
+import { Resume } from './Resume';
 export class YearUpStudent{
     id: number;
     accountId: number;
@@ -12,4 +14,6 @@ export class YearUpStudent{
     skill: string;
     expeience: Experience[];
     education: Education[];
+    picture: Picture;
+    resume: Resume;
 }
