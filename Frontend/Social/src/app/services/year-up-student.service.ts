@@ -33,7 +33,7 @@ export class YearUpStudentService {
   }
 
   createYearUpStudent(yus: YearUpStudent): Observable<any> {
-    return this.http.post<any>(this.URL+`/YearUpStudents`, YearUpStudent);
+    return this.http.post<any>(this.URL+`/YearUpStudents`, yus);
   }
 
   updateYearUpStudentById(id:number, yus: YearUpStudent): Observable<any> {
@@ -45,8 +45,23 @@ export class YearUpStudentService {
   }
 
   uploadFileByYearUpStudentId(id: number, file: File){
-    return this.http.post<any>(this.URL+`/upload/${id}`, file);
+    console.log(1)
+    const formData :FormData = new FormData();
+    console.log(2)
+    formData.append("file", file);
+    console.log(3)
+    return this.http.post<any>(this.URL+`/upload/resume/${id}`, formData)
   }
+  
 
+  uploadPictureByYearUpStudentId(id: number, file: File){
+    const formData = new FormData();
+    let student: YearUpStudent = new YearUpStudent();
+    this.fetchYearUpStudentById(id).subscribe(
+      data =>  student = data
+    );
+    formData.append("file", file);
+    return this.http.post<any>(this.URL+`/upload/photo/${id}`, formData);
+  }
 
 }
