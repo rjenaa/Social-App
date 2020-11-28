@@ -11,10 +11,14 @@ import { HomeComponent } from './home/home.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CreateYearupstudentComponent } from './components/create-yearupstudent/create-yearupstudent.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     PostListComponent,
     PostCreateComponent,
     ResourceListComponent,
@@ -23,10 +27,16 @@ import { CreateYearupstudentComponent } from './components/create-yearupstudent/
     HomeComponent,
     DevelopersComponent,
     CreateYearupstudentComponent
+=======
+    CreateYearupstudentComponent,
+    CreateAccountComponent
+>>>>>>> bb171f1eecc7fd3aa5b79ed41cb14ab51197f4fe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
