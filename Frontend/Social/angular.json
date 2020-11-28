@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Social"
+    }
+  },
+  "defaultProject": "Social",
+  "cli": {
+    "analytics": false
+  }
 }

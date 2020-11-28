@@ -28,7 +28,7 @@ public class PostController {
     }
 
     @RequestMapping (value = "/post", method = RequestMethod.GET)
-    public Iterable<Post> getPostByLikes(@PathVariable Long likes){
+    public Iterable<Post> getPostByLikes(@PathVariable Long likes,){
         return postService.getPostByLikes(likes);
     }
 

@@ -14,9 +14,16 @@ public class Post {
 
     private Long accountId;
     private String message;
-    private Long Likes;
+    private Long likes;
 
     public Post() {
+    }
+
+    public Post(Long id, Long accountId, Long likes) {
+        this.id = id;
+        this.accountId = accountId;
+        this.message = message;
+        this.likes = likes;
     }
 
     public Long getId() {
@@ -44,11 +51,11 @@ public class Post {
     }
 
     public Long getLikes() {
-        return Likes;
+        return likes;
     }
 
     public void setLikes(Long likes) {
-        Likes = likes;
+        this.likes = likes;
     }
 
     @Override
@@ -57,7 +64,7 @@ public class Post {
                 "id=" + id +
                 ", accountId=" + accountId +
                 ", message='" + message + '\'' +
-                ", Likes=" + Likes +
+                ", likes=" + likes +
                 '}';
     }
 }

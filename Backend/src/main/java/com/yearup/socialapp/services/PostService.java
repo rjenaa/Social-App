@@ -2,9 +2,12 @@ package com.yearup.socialapp.services;
 
 import com.yearup.socialapp.models.Post;
 import com.yearup.socialapp.repositories.PostRepository;
+import com.zaxxer.hikari.util.FastList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,10 +28,13 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public Iterable<Post> getPostByLikes(Long likes){
+    public Iterable<Post> getPostByLikes(Long id, Long accountId, Long likes){
 
+        //for(Post post:)
+        List<Post> postList = new ArrayList<>();
+        postList.add(new Post(id, accountId, likes));
 
-        return postRepository.findAllByRank(likes);
+        return postList;
     }
 
     public Post createPost(Post post){
