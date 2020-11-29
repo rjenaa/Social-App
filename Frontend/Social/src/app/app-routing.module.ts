@@ -10,7 +10,7 @@ const routes: Routes = [
   // {path: "", redirectTo: "create-account", pathMatch: "full"},
   {path: "", component: CreateAccountComponent},
   {path: "create-yearup/:id", component: CreateYearupstudentComponent},
-  {path: "home", component: HomeComponent},
+  {path: "home/:id", component: HomeComponent},
 
 ]
 
