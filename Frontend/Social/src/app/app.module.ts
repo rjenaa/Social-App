@@ -12,7 +12,7 @@ import { DevelopersComponent } from './developers/developers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CreateYearupstudentComponent } from './components/create-yearupstudent/create-yearupstudent.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 
 @NgModule({
@@ -32,7 +32,8 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

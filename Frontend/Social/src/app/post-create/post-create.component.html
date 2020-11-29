@@ -1,1 +1,22 @@
-<p>post-create works!</p>
+<div class="container" xmlns:width="http://www.w3.org/1999/xhtml">
+  <form (ngSubmit)="submitNewPost()" class="need-validation" novalidate>
+    <div class="card text-center" style="width: 36rem;">
+      <div class="card-body">
+        <div class="input-group">
+          <input type="text" class="form-control is-valid" id="validationServerPicture" aria-describedby="inputGroupPrepend3" required [(ngModel)]="post.picture" name="picture">
+        </div>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 40rem;">
+      <div class="card-body">
+        <label for="validationServerPost">Message</label>
+        <div class="input-group">
+          <input type="text" class="form-control is-valid" id="validationServerPost" aria-describedby="inputGroupPrepend3" required [(ngModel)]="post.message" name="message">
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="col-md-6">
+  <button class="btn btn-primary" type="submit">Submit Post</button>
+  </div>
+</div>

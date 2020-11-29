@@ -13,7 +13,7 @@
     <form class="text-center border border-light p-5" [formGroup] = "YearUpProfileForm" (ngSubmit)="createYearUp()">
 
         <p class="h4 mb-4">Create Your YearUp Profile!</p>
-  
+
         <div class="form-row mb-4">
           <div class="col">
             <!-- First name -->
@@ -38,11 +38,11 @@
           <!-- <label for="file">Choose File: </label> <input type="file" id="file" (change)= "handleFile($event.toarget.files)" ><button (click) = "uploadFile()">Upload File</button> -->
 
         <input type="text" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio">
-          
+
         <br>
 
         <!-- <label for="file">Upload Resume: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"></label>
-        
+
         <label for="file">Upload Picture: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"  ></label>  -->
         <div class = "form-group">
           <!-- <label for="file">Choose File: </label>
@@ -52,26 +52,26 @@
           <button (click) = "uploadFile()">Upload</button> -->
 
           <label for="file">Upload Resume: <input type="file" id="file" (change)= "handleFile($event.toarget.files)"></label>
-        
+
         <!-- <label for="file">Upload Picture: <input class="form-control" type="file" id="imageRaw  " (change)= "handleImage($event.toarget.files)"  ></label>  -->
       </div>
         <hr>
 
-         
-              
+
+
         <!-- Newsletter -->
         <!-- <div class="row">
           <div class="col-md-6 mx-auto d-flex justify-content-center">
             <mdb-checkbox [default]="true">Subscribe to our newsletter</mdb-checkbox>
           </div>
         </div> -->
-  
+
         <!-- Sign up button -->
         <button block="true" class="my-4" type="submit">Sign in</button>
-  
+
         <!-- Social register
         <p>or sign up with:</p>
-  
+
         <a type="button" class="light-blue-text mx-2">
           <mdb-icon fab icon="facebook"></mdb-icon>
         </a>
@@ -84,13 +84,13 @@
         <a type="button" class="light-blue-text mx-2">
           <mdb-icon fab icon="github"></mdb-icon>
         </a> -->
-  
+
         <hr>
-  
+
         <!-- Terms of service -->
         <p>By clicking
           <em>Sign up</em> you agree to our
           <a href="" target="_blank">terms of service</a></p>
-  
+
       </form>
 </div>
