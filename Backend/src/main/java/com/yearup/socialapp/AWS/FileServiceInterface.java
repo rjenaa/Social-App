@@ -12,6 +12,4 @@ public interface FileServiceInterface {
 
     Picture uploadPicture (MultipartFile file, YearUpStudent yearUpStudent);
 
-    void uploadFile(MultipartFile file, YearUpStudent yearUpStudent);
-
 }

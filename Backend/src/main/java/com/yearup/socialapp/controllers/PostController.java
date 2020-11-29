@@ -30,10 +30,10 @@ public class PostController {
         return postService.getPostById(id);
     }
 
-    @RequestMapping (value = "/post", method = RequestMethod.GET)
-    public Iterable<Post> getPostByLikes(){
-        return postService.getPostByLikes();
-    }
+//    @RequestMapping (value = "/post", method = RequestMethod.GET)
+//    public Iterable<Post> getPostByLikes(){
+//        return postService.getPostByLikes();
+//    }
 
     @RequestMapping (value = "/post/{accountId}", method = RequestMethod.GET)
     public Iterable<Post> getAllPostByAccountId(@PathVariable Long accountId){

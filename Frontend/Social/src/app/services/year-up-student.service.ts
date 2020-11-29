@@ -44,7 +44,7 @@ export class YearUpStudentService {
     return this.http.delete<any>(this.URL+`/YearUpStudents/${id}`);
   }
 
-  uploadFileByYearUpStudentId(id: number, file: File){
+  uploadFileByYearUpStudentId(id: number, file: any){
     console.log(1)
     const formData :FormData = new FormData();
     console.log(2)
