@@ -53,6 +53,7 @@ public class ResourcesController {
         Resources resources = resourcesService.getResourceById(id).get();
         YearUpStudent yearUpStudent = yearUpStudentService.getYearUpStudentByAccountID(accountId).get();
         fileService.uploadResume(multipartFile, yearUpStudent);
+
         final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

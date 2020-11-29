@@ -44,7 +44,7 @@ export class YearUpStudentService {
     return this.http.delete<any>(this.URL+`/YearUpStudents/${id}`);
   }
 
-  uploadFileByYearUpStudentId(id: number, file: File){
+  uploadFileByYearUpStudentId(id: number, file: any){
     console.log(1)
     const formData :FormData = new FormData();
     console.log(2)
@@ -55,12 +55,11 @@ export class YearUpStudentService {
   
 
   uploadPictureByYearUpStudentId(id: number, file: File){
-    const formData = new FormData();
-    let student: YearUpStudent = new YearUpStudent();
-    this.fetchYearUpStudentById(id).subscribe(
-      data =>  student = data
-    );
+    console.log(1)
+    const formData :FormData = new FormData();
+    console.log(2)
     formData.append("file", file);
+    console.log(3)
     return this.http.post<any>(this.URL+`/upload/photo/${id}`, formData);
   }
 

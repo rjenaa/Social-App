@@ -43,6 +43,7 @@ export class CreateYearupstudentComponent implements OnInit {
         this.yearUpStudent = data;
         console.log("Yearup Customer created: " + this.yearUpStudent.id);
         this.uploadFile(this.yearUpStudent.id);
+        this.uploadPicture(this.yearUpStudent.id);
       }
     )
   }
@@ -51,22 +52,22 @@ export class CreateYearupstudentComponent implements OnInit {
     this.fileRaw = files.item(0);
   }
 
-  // handleImage(files:FileList){
-  //   this.fileRaw = files.item(0);
-  // }
+  handleImage(files:FileList){
+    this.imageRaw = files.item(0);
+  }
 
 
   uploadFile(id:number){
-    console.log("upload commence")
+    console.log("upload commence for resume")
     this.yearUpStudentService.uploadFileByYearUpStudentId(id, this.fileRaw).subscribe(
       data => {
         console.log("Success file uploaded")
       }
     )
   };
-  uploadPicture(){
-    
-    this.yearUpStudentService.uploadPictureByYearUpStudentId(this.yearUpStudent.id, this.imageRaw).subscribe(
+  uploadPicture(id: number){
+    console.log("upload commence for profile picture")
+    this.yearUpStudentService.uploadPictureByYearUpStudentId(id, this.imageRaw).subscribe(
       data => {
         console.log("Success picture uploaded")
       },

@@ -5,6 +5,7 @@ import { CreateAccountComponent } from './components/create-account/create-accou
 import { CreateYearupstudentComponent } from './components/create-yearupstudent/create-yearupstudent.component';
 import {HomeComponent} from "./home/home.component";
 
+
 const routes: Routes = [
   // {path: "", redirectTo: "create-account", pathMatch: "full"},
   {path: "", component: CreateAccountComponent},
