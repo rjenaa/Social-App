@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/resource']);
   }
 
-  goToProfilePage(){
-    this.router.navigate(['/accounts']);
-  }
+  // goToProfilePage(){
+  //   this.router.navigate(['/accounts']);
+  // }
 }
