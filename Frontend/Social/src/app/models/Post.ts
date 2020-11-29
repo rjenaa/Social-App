@@ -1,7 +1,9 @@
+import {Picture} from "./Picture";
+
 export class Post{
     id: number;
     accountId: number;
     message: string;
-    Rank: number;
-    Likes: number;
+    likes: number;
+    picture: Picture;
 }
