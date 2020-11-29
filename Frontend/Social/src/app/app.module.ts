@@ -27,7 +27,6 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     DevelopersComponent,
     CreateYearupstudentComponent,
     CreateAccountComponent
-
   ],
   imports: [
     BrowserModule,
