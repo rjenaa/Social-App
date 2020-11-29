@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { YearUpStudent } from 'src/app/models/YearUpStudent';
 import { YearUpStudentService } from 'src/app/services/year-up-student.service';
 
@@ -14,7 +14,7 @@ export class CreateYearupstudentComponent implements OnInit {
   yearUpStudent: YearUpStudent = new YearUpStudent();
 
   id: number;
-  constructor(private yearUpStudentService:YearUpStudentService, private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) { }
+  constructor(private yearUpStudentService:YearUpStudentService, private router: Router, private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) { }
   fileRaw: File;
   imageRaw: File;
 
@@ -44,6 +44,7 @@ export class CreateYearupstudentComponent implements OnInit {
         console.log("Yearup Customer created: " + this.yearUpStudent.id);
         this.uploadFile(this.yearUpStudent.id);
         this.uploadPicture(this.yearUpStudent.id);
+        this.router.navigate([`home/${this.yearUpStudent.accountId}`])
       }
     )
   }
