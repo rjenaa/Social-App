@@ -52,7 +52,7 @@ public class ResourcesController {
     public ResponseEntity<String> uploadFile(@RequestParam(value = "file") final MultipartFile multipartFile, @PathVariable Long accountId, @PathVariable Long id){
         Resources resources = resourcesService.getResourceById(id).get();
         YearUpStudent yearUpStudent = yearUpStudentService.getYearUpStudentByAccountID(accountId).get();
-        fileService.uploadFile(multipartFile, yearUpStudent);
+//        fileService.uploadFile(multipartFile, yearUpStudent);
         final String response = "[" + multipartFile.getOriginalFilename() + "] uploaded successfully.";
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

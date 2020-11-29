@@ -18,7 +18,6 @@ import { CreateAccountComponent } from './components/create-account/create-accou
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
     PostListComponent,
     PostCreateComponent,
     ResourceListComponent,
@@ -26,11 +25,9 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     AccountListComponent,
     HomeComponent,
     DevelopersComponent,
-    CreateYearupstudentComponent
-=======
     CreateYearupstudentComponent,
     CreateAccountComponent
->>>>>>> bb171f1eecc7fd3aa5b79ed41cb14ab51197f4fe
+
   ],
   imports: [
     BrowserModule,
