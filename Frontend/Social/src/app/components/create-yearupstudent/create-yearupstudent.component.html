@@ -44,17 +44,18 @@
         <!-- <label for="file">Upload Resume: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"></label>
         
         <label for="file">Upload Picture: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"  ></label>  -->
-        <div class = "form-group">
-          <!-- <label for="file">Choose File: </label>
-          <input type="file"
-                  id ="file"
-                  (change)="handleFile($event.target.files)">
-          <button (click) = "uploadFile()">Upload</button> -->
+        <div class="row mb-4">
+          <div class = "form-group">
+              <div class="col">
+                <label for="file">Resume: Only PDF files are currenlty being supported <input type="file" id="file" (change)= "handleFile($event.target.files)"></label>
+              </div>
+              <div class="col">
+                  <label for="file">Picture : Only JPEG files currently supported <input type="file" id="file " (change)= "handleImage($event.target.files)"></label>
+                
+              </div>
+          </div>
+        </div>
 
-          <label for="file">Upload Resume: <input type="file" id="file" (change)= "handleFile($event.target.files)"></label>
-        
-        <!-- <label for="file">Upload Picture: <input class="form-control" type="file" id="imageRaw  " (change)= "handleImage($event.toarget.files)"  ></label>  -->
-      </div>
         <hr>
 
          
