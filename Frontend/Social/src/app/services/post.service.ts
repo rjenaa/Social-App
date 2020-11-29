@@ -12,20 +12,20 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  fetchAllPost(): Observable<any>{
+  getAllPost(): Observable<any>{
     return this.http.get<any>(this.URL+`/post/`);
   }
 
-  fetchPostById(id: number): Observable<any>{
+  getPostById(id: number): Observable<any>{
     return this.http.get<any>(this.URL+`/post/${id}`);
   }
 
-  fetchPostByAccountId(accountId: number): Observable<any>{
-    return this.http.get<any>(this.URL+`/post/${accountId}`);
+  getAllPostByAccountId(accountId: number): Observable<any>{
+    return this.http.get<any>(this.URL+`//post/YearUpStudent/${accountId}`);
   }
 
-  createAPost(post: Post): Observable<any>{
-    return this.http.post<any>(this.URL+`/post/`, post)
+  createAPost(accountId: number, post: Post): Observable<any>{
+    return this.http.post<any>(this.URL+`/YearUpStudent/${accountId}/post`, post)
   }
 
   deleteAPost(id: number): Observable<any>{
