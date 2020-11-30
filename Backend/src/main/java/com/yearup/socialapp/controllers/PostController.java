@@ -35,7 +35,7 @@ public class PostController {
         return postService.getAllPostByAccountId(accountId);
     }
 
-    @RequestMapping (value = "/post", method = RequestMethod.POST)
+    @RequestMapping (value = "/{accountId}/post", method = RequestMethod.POST)
     public Post createPost(@RequestBody Post post){
         return postService.createPost(post);
     }

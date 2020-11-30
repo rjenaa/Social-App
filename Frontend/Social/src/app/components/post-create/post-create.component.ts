@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Post} from "../models/Post";
-import {YearUpStudent} from "../models/YearUpStudent";
-import {PostService} from "../services/post.service";
+import {Post} from "../../models/Post";
+import {YearUpStudent} from "../../models/YearUpStudent";
+import {PostService} from "../../services/post.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {YearUpStudentService} from "../services/year-up-student.service";
+import {YearUpStudentService} from "../../services/year-up-student.service";
 
 @Component({
   selector: 'app-post-create',

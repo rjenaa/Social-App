@@ -1,4 +1,4 @@
-<div class="container" xmlns:width="http://www.w3.org/1999/xhtml">
+<div class="container">
   <form (ngSubmit)="submitNewPost()" class="need-validation" novalidate>
     <div class="card text-center" style="width: 36rem;">
       <div class="card-body">
@@ -16,8 +16,9 @@
         </div>
       </div>
     </div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" type="submit">Submit Post</button>
+    </div>
   </form>
-  <div class="col-md-6">
-  <button class="btn btn-primary" type="submit">Submit Post</button>
-  </div>
+
 </div>

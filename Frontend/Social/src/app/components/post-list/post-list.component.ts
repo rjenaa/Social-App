@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Post} from "../models/Post";
-import {PostService} from "../services/post.service";
+import {Post} from "../../models/Post";
+import {PostService} from "../../services/post.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {YearUpStudentService} from "../services/year-up-student.service";
-import {YearUpStudent} from "../models/YearUpStudent";
+import {YearUpStudentService} from "../../services/year-up-student.service";
+import {YearUpStudent} from "../../models/YearUpStudent";
 
 @Component({
   selector: 'app-post-list',

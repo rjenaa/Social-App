@@ -21,11 +21,11 @@ export class PostService {
   }
 
   getAllPostByAccountId(accountId: number): Observable<any>{
-    return this.http.get<any>(this.URL+`//post/YearUpStudent/${accountId}`);
+    return this.http.get<any>(this.URL+`/post/YearUpStudent/${accountId}`);
   }
 
   createAPost(accountId: number, post: Post): Observable<any>{
-    return this.http.post<any>(this.URL+`/YearUpStudent/${accountId}/post`, post)
+    return this.http.post<any>(this.URL+`/${accountId}/post`, post)
   }
 
   deleteAPost(id: number): Observable<any>{
