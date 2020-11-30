@@ -26,7 +26,7 @@ export class ResourcesService {
   }
 
   createResource(resources: Resources): Observable<any>{
-    return this.http.post<any>(this.URL+`/resources`,resources);
+    return this.http.post<any>(this.URL+`/resource`, resources);
   }
 
   deleteAResource(id: number): Observable<any>{

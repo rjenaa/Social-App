@@ -48,7 +48,7 @@ public class ResourcesController {
 //        return resourcesService.getMostLikedResourceByRank(ranked);
 //    }
 
-    @RequestMapping(value = "/{accountId/resource", method = RequestMethod.POST)
+    @RequestMapping(value = "/resource", method = RequestMethod.POST)
     public Resources createResource(@RequestBody Resources resource){
         return resourcesService.createResource(resource);
     }
