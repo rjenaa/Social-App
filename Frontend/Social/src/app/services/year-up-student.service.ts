@@ -45,21 +45,15 @@ export class YearUpStudentService {
   }
 
   uploadFileByYearUpStudentId(id: number, file: any){
-    console.log(1)
     const formData :FormData = new FormData();
-    console.log(2)
     formData.append("file", file);
-    console.log(3)
     return this.http.post<any>(this.URL+`/upload/resume/${id}`, formData)
   }
   
 
   uploadPictureByYearUpStudentId(id: number, file: File){
-    console.log(1)
     const formData :FormData = new FormData();
-    console.log(2)
     formData.append("file", file);
-    console.log(3)
     return this.http.post<any>(this.URL+`/upload/photo/${id}`, formData);
   }
 
