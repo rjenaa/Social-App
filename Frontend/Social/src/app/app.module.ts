@@ -12,11 +12,7 @@ import { DevelopersComponent } from './components/developers/developers.componen
 import { AppRoutingModule } from './app-routing.module';
 import { CreateYearupstudentComponent } from './components/create-yearupstudent/create-yearupstudent.component';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-=======
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
->>>>>>> 3b4f520a06398a31577983fe20e4e43e0947e01b
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { EditYearupstudentComponent } from './components/edit-yearupstudent/edit-yearupstudent.component';
@@ -45,11 +41,8 @@ import { CreateResourceComponent } from './components/create-resource/create-res
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-<<<<<<< HEAD
-    FormsModule
-=======
-    FormsModule 
->>>>>>> 3b4f520a06398a31577983fe20e4e43e0947e01b
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
