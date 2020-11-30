@@ -12,8 +12,12 @@ import { DevelopersComponent } from './developers/developers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CreateYearupstudentComponent } from './components/create-yearupstudent/create-yearupstudent.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { EditYearupstudentComponent } from './components/edit-yearupstudent/edit-yearupstudent.component';
+import { EditResourceComponent } from './components/edit-resource/edit-resource.component';
+import { CreateResourceComponent } from './components/create-resource/create-resource.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +30,18 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     HomeComponent,
     DevelopersComponent,
     CreateYearupstudentComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    LandingPageComponent,
+    EditYearupstudentComponent,
+    EditResourceComponent,
+    CreateResourceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

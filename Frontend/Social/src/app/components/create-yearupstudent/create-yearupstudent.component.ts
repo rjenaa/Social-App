@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { error } from 'protractor';
 import { YearUpStudent } from 'src/app/models/YearUpStudent';
 import { YearUpStudentService } from 'src/app/services/year-up-student.service';
 
@@ -60,13 +61,25 @@ export class CreateYearupstudentComponent implements OnInit {
 
   uploadFile(id:number){
     console.log("upload commence for resume")
-    this.yearUpStudentService.uploadFileByYearUpStudentId(id, this.fileRaw).subscribe(
-      data => {
-        console.log("Success file uploaded")
-      }
-    )
+    if(this.fileRaw == null){
+      console.log("file is empty")
+    }
+    else{
+      this.yearUpStudentService.uploadFileByYearUpStudentId(id, this.fileRaw).subscribe(
+        data => {
+          console.log("Success file uploaded")
+        },
+        error => {
+          console.log(error);
+        }
+      )
+    }
   };
   uploadPicture(id: number){
+    if(this.imageRaw == null){
+      console.log("no picture")
+    }
+    else{
     console.log("upload commence for profile picture")
     this.yearUpStudentService.uploadPictureByYearUpStudentId(id, this.imageRaw).subscribe(
       data => {
@@ -76,6 +89,7 @@ export class CreateYearupstudentComponent implements OnInit {
         console.log(error);
       }
     )
+    }
   };
 
 }

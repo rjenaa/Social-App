@@ -37,24 +37,34 @@
 
           <!-- <label for="file">Choose File: </label> <input type="file" id="file" (change)= "handleFile($event.toarget.files)" ><button (click) = "uploadFile()">Upload File</button> -->
 
-        <input type="text" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio">
+         <textarea type="text-box" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio"></textarea>
           
         <br>
 
         <!-- <label for="file">Upload Resume: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"></label>
         
         <label for="file">Upload Picture: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"  ></label>  -->
-        <div class="row mb-4">
+        <!-- <div class="row mb-4">
           <div class = "form-group">
               <div class="col">
                 <label for="file">Resume: Only PDF files are currenlty being supported <input type="file" id="file" (change)= "handleFile($event.target.files)"></label>
               </div>
               <div class="col">
                   <label for="file">Picture : Only JPEG files currently supported <input type="file" id="file " (change)= "handleImage($event.target.files)"></label>
-                
               </div>
           </div>
-        </div>
+        </div> -->
+        
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Resume: Only PDF files are currenlty being supported</label>
+            <input class="form-control-file" id="exampleFormControlFile1" type="file" id="file" (change)= "handleFile($event.target.files)">
+          </div>
+        
+          <div class="form-group">
+            <label for="exampleFormControlFile2">Only JPEG files currently supported</label>
+            <input  class="form-control-file" id="exampleFormControlFile2" type="file" id="file" (change)= "handleImage($event.target.files)">
+          </div>
+        
 
         <hr>
 
