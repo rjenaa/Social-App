@@ -1,0 +1,14 @@
+<div class="container">
+<div class="card col-md-4">
+    <img [src]="student.picture.url" alt="Avatar" >
+    <hr>
+    <div class="container">
+      <h4><b>{{student.firstName}} {{student.lastName}}</b></h4>
+      <h4>Nickname: {{student.nickName}}</h4>
+      <h4>Email: {{student.email}}</h4>
+      <h4>PhoneNumber: {{student.phoneNumber}}</h4>
+      <button *ngIf = "student.resume.url; else elseBlock" type="button" class="btn btn-dark" (click)="showFile()">View Resume</button>
+      <ng-template #elseBlock><h4>No Resume found </h4></ng-template>
+    </div>
+  </div>
+</div>

@@ -31,7 +31,7 @@ export class EditYearupstudentComponent implements OnInit {
       data => {
         this.yus = data;
         console.log("year up info acquired");
-        console.log(this.yus.picture.URL)
+        console.log(this.yus.picture.url)
       }
     )
   }

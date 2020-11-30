@@ -1,18 +1,9 @@
-<!-- <div class = "form-group">
-    <label for="file">Choose File: </label>
-    <input type="file"
-            id ="file"
-            (change)="handleFile($event.target.files)">
-    <button (click) = "uploadFile()">Upload</button>
-</div>
-<div>
-    <button (click)="viewFile()">View File</button>
-</div> -->
+
 
 <div class="container">
-    <form class="text-center border border-light p-5" [formGroup] = "YearUpProfileForm" (ngSubmit)="createYearUp()">
+    <form class="border border-light p-5" [formGroup] = "YearUpProfileForm" (ngSubmit)="createYearUp()">
 
-        <p class="h4 mb-4">Create Your YearUp Profile!</p>
+        <p class="h4 mb-4 text-center">Create Your Profile!</p>
 
         <div class="form-row mb-4">
           <div class="col">
@@ -30,73 +21,35 @@
               <input type="text" id="defaultRegisterFormNickName" class="form-control" placeholder="(Optional) Nickname" formControlName = "nickName">
             </div>
             <div class="col">
-              <!-- bio -->
-              <!-- <input type="text" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio"> -->
             </div>
           </div>
-
-          <!-- <label for="file">Choose File: </label> <input type="file" id="file" (change)= "handleFile($event.toarget.files)" ><button (click) = "uploadFile()">Upload File</button> -->
 
          <textarea type="text-box" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio"></textarea>
 
         <br>
-
-        <!-- <label for="file">Upload Resume: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"></label>
-
-        <label for="file">Upload Picture: <input class="form-control" type="file" id="file" (change)= "handleFile($event.toarget.files)"  ></label>  -->
-        <!-- <div class="row mb-4">
-          <div class = "form-group">
-              <div class="col">
-                <label for="file">Resume: Only PDF files are currently being supported <input type="file" id="file" (change)= "handleFile($event.target.files)"></label>
-              </div>
-              <div class="col">
-                  <label for="file">Picture : Only JPEG files currently supported <input type="file" id="file " (change)= "handleImage($event.target.files)"></label>
-
-              </div>
+          <div class="row text-center">
+            <div class="row-col">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Resume: Only PDF files are currently being supported</label>
+              <input class="form-control-file" id="exampleFormControlFile1" type="file" id="file" (change)= "handleFile($event.target.files)">
+            </div>
           </div>
-        </div> -->
-
-          <div class="form-group">
-            <label for="exampleFormControlFile1">Resume: Only PDF files are currently being supported</label>
-            <input class="form-control-file" id="exampleFormControlFile1" type="file" id="file" (change)= "handleFile($event.target.files)">
+          <div class="row-col">
+            <div class="form-group">
+              <label for="exampleFormControlFile2">Profile Picture: Only JPEG files currently supported</label>
+              <input  class="form-control-file" id="exampleFormControlFile2" type="file" id="image" (change)= "handleImage($event.target.files)">
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="exampleFormControlFile2">Only JPEG files currently supported</label>
-            <input  class="form-control-file" id="exampleFormControlFile2" type="file" id="file" (change)= "handleImage($event.target.files)">
           </div>
+          
 
 
         <!-- <label for="file">Upload Picture: <input class="form-control" type="file" id="imageRaw  " (change)= "handleImage($event.toarget.files)"  ></label>  -->
         <hr>
 
-
-
-        <!-- Newsletter -->
-        <!-- <div class="row">
-          <div class="col-md-6 mx-auto d-flex justify-content-center">
-            <mdb-checkbox [default]="true">Subscribe to our newsletter</mdb-checkbox>
-          </div>
-        </div> -->
-
         <!-- Sign up button -->
         <button block="true" class="my-4" type="submit">Sign in</button>
-
-        <!-- Social register
-        <p>or sign up with:</p>
-
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="facebook"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="linkedin"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="github"></mdb-icon>
-        </a> -->
 
         <hr>
 

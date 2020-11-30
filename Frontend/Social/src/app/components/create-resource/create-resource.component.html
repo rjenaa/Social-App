@@ -1,20 +1,19 @@
 <div class="container">
+    <div class="col-md-4">
     <div class="card">
-        <h5 class="card-header">Featured</h5>
         <div class="card-body">
-        <!-- <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-            Featured
-            </div>
-            <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-        </div>
+            
+            <label for="fileupload">Upload any files here:</label>
+            <input type="file" id=fileupload (change)= "handleImage($event.target.files)">
+            <form [formGroup] = "resourceForm" (ngSubmit)="createResource()" >
+            <hr>
+
+            <textarea type="text" class="form-control" formControlName="message" rows = 4 cols = 37 placeholder="Type your resource here ...."></textarea>
+
+            <hr>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
         </div>
     </div>
+</div>
 </div>

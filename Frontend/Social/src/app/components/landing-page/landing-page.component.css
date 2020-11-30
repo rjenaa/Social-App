@@ -1,0 +1,16 @@
+#rcorners4 {
+    /* border-radius: ; */
+    background-image: url("https://previews.123rf.com/images/peshkova/peshkova1704/peshkova170400560/76070955-back-view-of-young-man-in-suit-on-pier-city-view-background.jpg");
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-position: center;
+  }
+
+  #rounded{
+      border-radius: 20px;
+  }
+
+  button{
+      display: flex;
+      margin-left: 70%;
+  }
