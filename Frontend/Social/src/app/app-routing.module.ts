@@ -8,6 +8,8 @@ import { EditYearupstudentComponent } from './components/edit-yearupstudent/edit
 import { EditResourceComponent } from './components/edit-resource/edit-resource.component';
 import { CreateResourceComponent } from './components/create-resource/create-resource.component';
 import {HomeComponent} from "./components/home/home.component";
+import {ResourceListComponent} from "./components/resource-list/resource-list.component";
+import {YearUpStudentsListComponent} from "./components/year-up-students-list/year-up-students-list.component";
 import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: "edit-yearup/:id", component: EditYearupstudentComponent},
   {path: "edit-resource/:id", component: EditResourceComponent},
   {path: "create-resource/:id", component: CreateResourceComponent},
+  {path: "resource/:id", component: ResourceListComponent},
+  {path: "yearUpStudents", component: YearUpStudentsListComponent},
   {path: "view-profile/:id", component: ViewProfileComponent}
 ]
 
@@ -30,4 +34,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

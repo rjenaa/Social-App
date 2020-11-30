@@ -45,7 +45,7 @@ import { IonicModule } from '@ionic/angular';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    IonicModule.forRoot() 
+    IonicModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

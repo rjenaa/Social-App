@@ -1,1 +1,13 @@
-<p>post-list works!</p>
+<ion-content>
+  <div class="ion-padding">
+    <h4>This is the infinite scroll</h4>
+    <ion-list></ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

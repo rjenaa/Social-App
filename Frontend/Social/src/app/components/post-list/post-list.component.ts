@@ -20,4 +20,10 @@ export class PostListComponent implements OnInit {
 
   }
 
+  loadData(event) {
+    setTimeout(() =>{
+      console.log("Done");
+      event.target.complete();
+    }, 500);
+  }
 }

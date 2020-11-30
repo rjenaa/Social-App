@@ -33,7 +33,7 @@ public class ResourcesController {
         return resourcesService.getResourceById(id);
     }
 
-    @RequestMapping (value = "/resource/{accountId}", method = RequestMethod.GET)//get all resource by account id
+    @RequestMapping (value = "/resources/{accountId}", method = RequestMethod.GET)//get all resource by account id
     public Iterable<Resources> getAllResourcesByAccountId(@PathVariable Long accountId){
         return resourcesService.getAllResourcesByAccountId(accountId);
     }
@@ -48,7 +48,12 @@ public class ResourcesController {
 //        return resourcesService.getMostLikedResourceByRank(ranked);
 //    }
 
-    @PostMapping (value = "/upload/resources/{accountId}/{id}")//Creating a resource
+    @RequestMapping(value = "/{accountId/resource", method = RequestMethod.POST)
+    public Resources createResource(@RequestBody Resources resource){
+        return resourcesService.createResource(resource);
+    }
+
+    @PostMapping (value = "/upload/resource/{accountId}/{id}")//Creating a resource
     public ResponseEntity<String> uploadFile(@RequestParam(value = "file") final MultipartFile multipartFile, @PathVariable Long accountId, @PathVariable Long id){
         Resources resources = resourcesService.getResourceById(id).get();
         YearUpStudent yearUpStudent = yearUpStudentService.getYearUpStudentByAccountID(accountId).get();
