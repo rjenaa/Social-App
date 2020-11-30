@@ -1,9 +1,6 @@
 package com.yearup.socialapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Post {
@@ -15,6 +12,9 @@ public class Post {
     private Long accountId;
     private String message;
     private Long likes;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Picture picture;
 
     public Post() {
     }
@@ -56,6 +56,14 @@ public class Post {
         this.likes = likes;
     }
 
+    public Picture getPicture() {
+        return picture;
+    }
+
+    public void setPicture(Picture picture) {
+        this.picture = picture;
+    }
+
     @Override
     public String toString() {
         return "Post{" +
@@ -63,6 +71,7 @@ public class Post {
                 ", accountId=" + accountId +
                 ", message='" + message + '\'' +
                 ", likes=" + likes +
+                ", picture=" + picture +
                 '}';
     }
 }

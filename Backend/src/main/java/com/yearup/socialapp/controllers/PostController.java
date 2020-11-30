@@ -30,17 +30,12 @@ public class PostController {
         return postService.getPostById(id);
     }
 
-//    @RequestMapping (value = "/post", method = RequestMethod.GET)
-//    public Iterable<Post> getPostByLikes(){
-//        return postService.getPostByLikes();
-//    }
-
     @RequestMapping (value = "/post/{accountId}", method = RequestMethod.GET)
     public Iterable<Post> getAllPostByAccountId(@PathVariable Long accountId){
         return postService.getAllPostByAccountId(accountId);
     }
 
-    @RequestMapping (value = "/post", method = RequestMethod.POST)
+    @RequestMapping (value = "/{accountId}/post", method = RequestMethod.POST)
     public Post createPost(@RequestBody Post post){
         return postService.createPost(post);
     }
