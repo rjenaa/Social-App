@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {YearUpStudent} from "../../models/YearUpStudent";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-resource-list',
@@ -12,9 +13,12 @@ export class ResourceListComponent implements OnInit {
 
   numTimesLeft = 10;
 
+  yearUpStudent: YearUpStudent = new YearUpStudent();
   yearUpStudents: YearUpStudent[];
+  emptyArray: YearUpStudent[];
+  id: number;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -31,5 +35,20 @@ export class ResourceListComponent implements OnInit {
   addMoreResources(){
     for (let i = 0; i < 15; i ++)
       this.items.push(i);
+  }
+
+  goToResourceListPage(){
+    this.id = this.activatedRoute.snapshot.params[`id`];
+    this.router.navigate(['resource/'+ this.id]);
+  }
+
+  goToHomePage(){
+    this.id = this.activatedRoute.snapshot.params[`id`];
+    this.router.navigate(['home/'+ this.id]);
+  }
+
+  goToProfilePage(){
+    this.id = this.activatedRoute.snapshot.params[`id`];
+    this.router.navigate(['view-profile/'+ this.id]);
   }
 }

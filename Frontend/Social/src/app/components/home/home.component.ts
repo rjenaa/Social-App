@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit {
 
   goToProfilePage(){
     this.id = this.activatedRoute.snapshot.params[`id`];
-    this.router.navigate(['profile/'+ this.id]);
+    this.router.navigate(['view-profile/'+ this.id]);
   }
 
   goToHomePage(){
