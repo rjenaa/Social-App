@@ -8,6 +8,8 @@ import { EditYearupstudentComponent } from './components/edit-yearupstudent/edit
 import { EditResourceComponent } from './components/edit-resource/edit-resource.component';
 import { CreateResourceComponent } from './components/create-resource/create-resource.component';
 import {HomeComponent} from "./components/home/home.component";
+import {ResourceListComponent} from "./components/resource-list/resource-list.component";
+import {YearUpStudentsListComponent} from "./components/year-up-students-list/year-up-students-list.component";
 
 const routes: Routes = [
   {path: "", component: LandingPageComponent},
@@ -16,7 +18,10 @@ const routes: Routes = [
   {path: "home/:id", component: HomeComponent},
   {path: "edit-yearup/:id", component: EditYearupstudentComponent},
   {path: "edit-resource/:id", component: EditResourceComponent},
-  {path: "create-resource/:id", component: CreateResourceComponent}
+  {path: "create-resource/:id", component: CreateResourceComponent},
+  {path: "resource/:id", component: ResourceListComponent},
+  {path: "yearUpStudents", component: YearUpStudentsListComponent},
+
 ]
 
 @NgModule({

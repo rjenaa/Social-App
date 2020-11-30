@@ -1,1 +1,30 @@
-<p>resource-list works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active " href="#">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link " href="http://localhost:4200/resource">Resources</a>
+      <a class="nav-item nav-link" href="http://localhost:4200/profile">Profile</a>
+    </div>
+  </div>
+</nav>
+
+<ion-content>
+  <div class="ion-padding">
+    <h4>This is the infinite scroll</h4>
+
+    <ion-list>
+      <ion-item *ngFor="let item of items">{{item}}</ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)" [disabled]="numTimesLeft <= 0" position="top">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

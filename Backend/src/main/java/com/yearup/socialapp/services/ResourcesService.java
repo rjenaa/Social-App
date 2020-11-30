@@ -25,6 +25,10 @@ public class ResourcesService {
         return resourcesRepository.findAllByAccountId(accountId);
     }
 
+    public Resources createResource(Resources resources){
+        return resourcesRepository.save(resources);
+    }
+
 //    public Iterable<Resources> getMostLikedResourceByRank(Integer rank){
 //        return resourcesRepository.findAllByRank(rank);
 //    }
