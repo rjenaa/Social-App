@@ -1,0 +1,64 @@
+
+<div class="container">
+    <form class="border border-light p-5" (ngSubmit)="editYearUp()">
+
+        <p class="text-center h4 mb-4">Edit YearUp Profile!</p>
+  
+        <div class="form-row mb-4">
+          <div class="col">
+            <!-- First name -->
+            <label for="firstName">FirstName</label>
+            <input type="text" id="firstName" class="form-control" name = "firstName" required [(ngModel)] = "yus.firstName">
+          </div>
+          <div class="col">
+            <!-- Last name -->
+            <label for="lastName">LastName</label>
+            <input type="text" id="lastName" class="form-control" name = "lastName" required [(ngModel)] = "yus.lastName">
+          </div>
+        </div>
+        <div class="form-row mb-4">
+            <div class="col">
+              <!-- Nickname -->
+              <label for="nickName">Nickname</label>
+              <input type="text" id="nickName" class="form-control"  name = "nickName" [(ngModel)] = "yus.nickName">
+            </div>
+            <div class="col">
+              <!-- bio -->
+              <!-- <input type="text" id="defaultRegisterFormBio" class="form-control" placeholder="About you" formControlName = "bio"> -->
+            </div>
+          </div>
+          <label for="bio"></label>
+         <textarea type="text-box" id="bio" class="form-control"  name = "bio" [(ngModel)]="yus.bio"></textarea>
+          
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Resume: Only PDF files are currenlty being supported</label>
+                    <input class="form-control-file" id="exampleFormControlFile1" type="file" id="file" (change)= "handleFile($event.target.files)">
+                </div>
+                
+            </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleFormControlFile2">Only JPEG files currently supported</label>
+            <input  class="form-control-file" id="exampleFormControlFile2" type="file" id="file" (change)= "handleImage($event.target.files)">
+          </div>
+        </div>
+        </div>
+        
+
+        <hr>
+  
+        <!-- Sign up button -->
+        <button block="true" class="my-4" type="submit">Confirm Changes</button>
+  
+        <hr>
+  
+        <!-- Terms of service -->
+        <p>By clicking
+          <em>Sign up</em> you agree to our
+          <a href="" target="_blank">terms of service</a></p>
+  
+      </form>
+</div>

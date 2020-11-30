@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class = "col-md-12">
+        <div class="card">
+            <div class="card-header text-center">
+                Sign In
+            </div>
+            <div class="card-body">
+
+                <form class="text border border-light p-5" [formGroup] = "accountForm" (ngSubmit)="signIn()">
+
+                    <label for="exampleInputUsername">Email address</label>
+                    <input type="text" id="exampleInputUsername" class="form-control mb-4"  formControlName = "userName">
+
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" id="exampleInputPassword1" class="form-control"  aria-describedby="defaultRegisterFormPasswordHelpBlock" formControlName = "password">
+                    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                        At least 8 characters and 1 digit
+                    </small>
+
+                    <button type="submit" class="btn btn-outline-primary">Sign in</button>
+
+                 </form>
+            </div>
+            <div class="card-footer text-center">
+                Don't have an account? <a href="/create-account">Sign up here!</a>
+            </div>    
+        </div>  
+    </div>
+</div>

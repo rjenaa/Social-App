@@ -78,7 +78,7 @@ public class FileService implements FileServiceInterface{
 
         String updatedFileName = yearUpStudent.getLastName() + "_"+picture.getId()+"Image_"  + LocalDate.now() + "_" +file.getOriginalFilename();
 
-        LOGGER.info("Uploading file with name= " + updatedFileName);
+        LOGGER.info("Uploading picture with name= " + updatedFileName);
 
         final PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, updatedFileName, uploadFile);
 
