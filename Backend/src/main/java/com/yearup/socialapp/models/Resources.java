@@ -1,9 +1,6 @@
 package com.yearup.socialapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Resources {
@@ -16,6 +13,8 @@ public class Resources {
     private Long accountId;
     private Integer helpful;
     private Integer notHelpful;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Resume resume;
 
     public Resources() {
     }
@@ -60,6 +59,14 @@ public class Resources {
         this.accountId = accountId;
     }
 
+    public Resume getResume() {
+        return resume;
+    }
+
+    public void setResume(Resume resume) {
+        this.resume = resume;
+    }
+
     @Override
     public String toString() {
         return "Resources{" +
@@ -68,6 +75,7 @@ public class Resources {
                 ", accountId=" + accountId +
                 ", helpful=" + helpful +
                 ", notHelpful=" + notHelpful +
+                ", resume=" + resume +
                 '}';
     }
 }

@@ -10,6 +10,7 @@ import { CreateResourceComponent } from './components/create-resource/create-res
 import {HomeComponent} from "./components/home/home.component";
 import {ResourceListComponent} from "./components/resource-list/resource-list.component";
 import {YearUpStudentsListComponent} from "./components/year-up-students-list/year-up-students-list.component";
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 const routes: Routes = [
   {path: "", component: LandingPageComponent},
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path: "create-resource/:id", component: CreateResourceComponent},
   {path: "resource/:id", component: ResourceListComponent},
   {path: "yearUpStudents", component: YearUpStudentsListComponent},
-
+  {path: "view-profile/:id", component: ViewProfileComponent}
 ]
 
 @NgModule({

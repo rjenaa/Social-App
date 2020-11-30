@@ -18,6 +18,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { EditYearupstudentComponent } from './components/edit-yearupstudent/edit-yearupstudent.component';
 import { EditResourceComponent } from './components/edit-resource/edit-resource.component';
 import { CreateResourceComponent } from './components/create-resource/create-resource.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 import { IonicModule } from '@ionic/angular';
 
 @NgModule({
@@ -35,7 +36,8 @@ import { IonicModule } from '@ionic/angular';
     LandingPageComponent,
     EditYearupstudentComponent,
     EditResourceComponent,
-    CreateResourceComponent
+    CreateResourceComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,6 @@ import { IonicModule } from '@ionic/angular';
     ReactiveFormsModule,
     FormsModule,
     IonicModule.forRoot(),
-
   ],
   providers: [],
   bootstrap: [AppComponent]
